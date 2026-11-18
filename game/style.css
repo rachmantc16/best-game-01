@@ -1,0 +1,43 @@
+/* Starfall Defender page frame: a dark room, a glowing screen. No images, no fonts to fetch. */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 50% 18%, #101a3d 0%, #070b1d 55%, #03040c 100%);
+  color: #cfe6ff;
+  font-family: "Trebuchet MS", Verdana, system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#stage {
+  width: min(100vw, 160vh);
+  padding: clamp(6px, 1.5vmin, 18px);
+}
+
+canvas#game {
+  display: block;
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  background: #050914;
+  border: 1px solid rgba(64, 224, 255, 0.45);
+  border-radius: 10px;
+  box-shadow:
+    0 0 24px rgba(64, 224, 255, 0.28),
+    0 0 90px rgba(150, 64, 255, 0.18),
+    inset 0 0 60px rgba(0, 0, 0, 0.55);
+  cursor: crosshair;
+}
