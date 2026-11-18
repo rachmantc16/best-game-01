@@ -14,6 +14,8 @@ Hand the entry in (copies `game/` and `screenshots/` to the output directory and
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
+Before copying, the handover verifies the payload — every file under `game/` present and non-empty, every screenshot within the 256 KiB cap — clears any stale output from a previous run, and prints a build summary (game file count, screenshot sizes, dossier size) after reading `dossier.json` back. A clean run reports 11 game files, 4 screenshots and a valid `makefun/dossier/v1` dossier.
+
 Or play the game locally with the tiny bundled server, then open the address it prints:
 
 ```sh
